@@ -1,0 +1,12 @@
+Project_Folder/
+│── index.html
+│── style.css
+│── app.js
+│── templates/
+│   └── Structure.xlsx
+│── data/
+│   └── (الملفات المرفوعة)
+│── output/
+│   └── Final_Report.xlsx
+└── scripts/
+    └── process_data.py

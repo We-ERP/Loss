@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC Performance - Daily Loss Time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>CC Performance</h2>
+        <ul>
+            <li class="active">التقرير اليومي</li>
+            <li>رفع الملفات</li>
+            <li>أداء الموظفين</li>
+            <li>الإعدادات</li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Daily Performance Matrix</h1>
+            <p>تقرير يومي شامل لحساب Loss Time و Talk Time و TKTs</p>
+            <div class="export-btns">
+                <button class="btn-export csv">تصدير CSV</button>
+                <button class="btn-export excel">تصدير Excel</button>
+            </div>
+        </div>
+
+        <div class="upload-section">
+            <h3>تحميل الشيتات ومعالجة البيانات</h3>
+            <div class="cards-container">
+                <!-- Structure -->
+                <div class="upload-card">
+                    <label>Structure Master</label>
+                    <input type="file" id="structure_file" accept=".xlsx">
+                </div>
+                <!-- Schedule -->
+                <div class="upload-card">
+                    <label>Schedule Time</label>
+                    <input type="file" id="schedule_file" accept=".xlsx, .csv">
+                </div>
+                <!-- UTL -->
+                <div class="upload-card">
+                    <label>UTL Logs</label>
+                    <input type="file" id="utl_file" accept=".xlsx, .csv">
+                </div>
+                <!-- IR Tickets -->
+                <div class="upload-card">
+                    <label>IR Tickets</label>
+                    <input type="file" id="ir_file" accept=".xlsx, .csv">
+                </div>
+                <!-- Compensation -->
+                <div class="upload-card">
+                    <label>Compensation</label>
+                    <input type="file" id="comp_file" accept=".xlsx, .csv">
+                </div>
+            </div>
+            <button id="processBtn" class="btn-process">بدء المعالجة وإنشاء التقرير</button>
+        </div>
+        
+        <div class="status-message" id="statusMessage"></div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
