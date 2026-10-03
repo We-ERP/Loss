@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CC Performance - Daily Loss Time</title>
     <link rel="stylesheet" href="style.css">
+    <!-- إضافة مكتبة SheetJS لمعالجة الإكسيل في المتصفح مباشرة -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
     <div class="sidebar">
@@ -22,35 +24,29 @@
             <h1>Daily Performance Matrix</h1>
             <p>تقرير يومي شامل لحساب Loss Time و Talk Time و TKTs</p>
             <div class="export-btns">
-                <button class="btn-export csv">تصدير CSV</button>
-                <button class="btn-export excel">تصدير Excel</button>
+                <button class="btn-export excel" id="exportExcelBtn" style="display:none;">تنزيل التقرير النهائي</button>
             </div>
         </div>
 
         <div class="upload-section">
             <h3>تحميل الشيتات ومعالجة البيانات</h3>
             <div class="cards-container">
-                <!-- Structure -->
                 <div class="upload-card">
                     <label>Structure Master</label>
                     <input type="file" id="structure_file" accept=".xlsx">
                 </div>
-                <!-- Schedule -->
                 <div class="upload-card">
                     <label>Schedule Time</label>
                     <input type="file" id="schedule_file" accept=".xlsx, .csv">
                 </div>
-                <!-- UTL -->
                 <div class="upload-card">
                     <label>UTL Logs</label>
                     <input type="file" id="utl_file" accept=".xlsx, .csv">
                 </div>
-                <!-- IR Tickets -->
                 <div class="upload-card">
                     <label>IR Tickets</label>
                     <input type="file" id="ir_file" accept=".xlsx, .csv">
                 </div>
-                <!-- Compensation -->
                 <div class="upload-card">
                     <label>Compensation</label>
                     <input type="file" id="comp_file" accept=".xlsx, .csv">
